@@ -1,1 +1,426 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Istriku ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #fff8f5;
+    color: #4a3030;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: clamp(42px, 9vw, 82px);
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: clamp(30px, 6vw, 52px);
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.small {
+    font-size: 14px;
+    opacity: .75;
+}
+
+button {
+    border: none;
+    padding: 15px 28px;
+    border-radius: 50px;
+    background: #a85d65;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(120,60,60,.2);
+}
+
+button:hover {
+    transform: scale(1.04);
+}
+
+.hero {
+    background:
+        radial-gradient(circle at 20% 20%, #ffe4e8, transparent 30%),
+        radial-gradient(circle at 80% 80%, #f8d9d2, transparent 30%),
+        #fff8f5;
+}
+
+.hero h1 {
+    color: #9d5059;
+}
+
+.heart {
+    font-size: 60px;
+    animation: pulse 1.8s infinite;
+}
+
+.card {
+    background: rgba(255,255,255,.88);
+    border-radius: 28px;
+    padding: 35px;
+    box-shadow: 0 20px 60px rgba(100,50,50,.12);
+    margin-top: 25px;
+}
+
+.staycation {
+    background:
+        linear-gradient(rgba(75,45,45,.35),rgba(75,45,45,.35)),
+        linear-gradient(135deg,#c9a58f,#8f7470);
+    color: white;
+}
+
+.staycation .card {
+    background: rgba(255,255,255,.93);
+    color: #4a3030;
+}
+
+.detail {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.detail div {
+    background: #fff3ef;
+    padding: 20px 10px;
+    border-radius: 20px;
+}
+
+.detail strong {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.final {
+    background:
+        radial-gradient(circle at 50% 20%, #ffe0e4, transparent 35%),
+        #fff8f5;
+}
+
+.signature {
+    font-size: 25px;
+    margin-top: 35px;
+    color: #9d5059;
+}
+
+.scroll {
+    margin-top: 40px;
+    opacity: .6;
+    font-size: 14px;
+}
+
+.floating-heart {
+    position: fixed;
+    font-size: 20px;
+    animation: float 7s linear infinite;
+    opacity: .5;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes pulse {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh) rotate(0deg);
+    }
+    to {
+        transform: translateY(-120px) rotate(360deg);
+    }
+}
+
+@media(max-width:600px) {
+    .card {
+        padding: 25px 20px;
+    }
+
+    .detail {
+        grid-template-columns: 1fr;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIK -->
+<audio id="music" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.addEventListener("click", function() {
+    const music = document.getElementById("music");
+    music.play().catch(() => {});
+}, {once:true});
+</script>
+
+<!-- HATI TERBANG -->
+<script>
+setInterval(function() {
+    const heart = document.createElement("div");
+    heart.className = "floating-heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+}, 900);
+</script>
+
+<!-- HALAMAN 1 -->
+<section class="hero">
+    <div class="container">
+
+        <div class="heart">❤️</div>
+
+        <p class="small">ADA SESUATU UNTUKMU...</p>
+
+        <h1>Untuk Istriku</h1>
+
+        <p>
+            Hari ini bukan sekadar tentang bertambahnya usia.
+            Hari ini adalah tentang merayakan seseorang
+            yang begitu berarti dalam hidupku.
+        </p>
+
+        <button onclick="document.getElementById('message').scrollIntoView()">
+            Buka Surprise 💌
+        </button>
+
+        <div class="scroll">
+            ↓ scroll perlahan ↓
+        </div>
+
+    </div>
+</section>
+
+
+<!-- HALAMAN 2 -->
+<section id="message">
+    <div class="container">
+
+        <div class="card">
+
+            <div class="heart">💐</div>
+
+            <h2>Selamat Ulang Tahun, Sayang</h2>
+
+            <p>
+                Terima kasih sudah menjadi bagian terindah
+                dalam perjalanan hidupku.
+            </p>
+
+            <p>
+                Terima kasih untuk semua cerita,
+                tawa, kesabaran, perhatian,
+                dan kasih sayang yang kamu berikan setiap hari.
+            </p>
+
+            <p>
+                Aku mungkin tidak selalu pandai mengungkapkan
+                semuanya dengan kata-kata...
+                tapi aku ingin kamu tahu,
+                bahwa aku sangat bersyukur memilikimu.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- HALAMAN 3 -->
+<section class="staycation">
+    <div class="container">
+
+        <div class="card">
+
+            <div style="font-size:55px;">🏨</div>
+
+            <h2>Dan Aku Punya Surprise...</h2>
+
+            <p>
+                Kali ini aku ingin kita berhenti sejenak
+                dari rutinitas.
+            </p>
+
+            <p>
+                Tidak perlu memikirkan pekerjaan.
+                Tidak perlu memikirkan kesibukan.
+                Cukup kita berdua.
+            </p>
+
+            <h2 style="color:#9d5059;">
+                STAYCATION DI SOLO ❤️
+            </h2>
+
+            <p>
+                <strong>1 malam untuk kita.</strong><br>
+                Sebuah waktu untuk menikmati,
+                bersantai, ngobrol,
+                tertawa, dan membuat kenangan baru.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- HALAMAN 4 -->
+<section>
+    <div class="container">
+
+        <h2>Our Little Escape 🥂</h2>
+
+        <div class="card">
+
+            <p>
+                🏨 Hotel berbintang
+            </p>
+
+            <p>
+                🏊 Kolam renang
+            </p>
+
+            <p>
+                🌅 Pemandangan indah
+            </p>
+
+            <p>
+                🌙 1 malam hanya untuk kita
+            </p>
+
+            <div class="detail">
+
+                <div>
+                    <strong>1</strong>
+                    Malam
+                </div>
+
+                <div>
+                    <strong>2</strong>
+                    Kita
+                </div>
+
+                <div>
+                    <strong>∞</strong>
+                    Kenangan
+                </div>
+
+            </div>
+
+            <p style="margin-top:30px;">
+                Karena terkadang,
+                hadiah terbaik bukanlah sesuatu yang bisa dibungkus...
+            </p>
+
+            <p>
+                tapi <strong>waktu yang kita habiskan bersama.</strong>
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- HALAMAN 5 -->
+<section class="final">
+    <div class="container">
+
+        <div class="heart">❤️</div>
+
+        <h2>Untuk Kamu...</h2>
+
+        <div class="card">
+
+            <p>
+                Semoga di usia yang baru ini,
+                kamu selalu diberikan kebahagiaan,
+                kesehatan,
+                dan banyak alasan untuk tersenyum.
+            </p>
+
+            <p>
+                Dan semoga aku selalu menjadi
+                orang yang bisa menemani kamu
+                dalam setiap perjalanan hidup.
+            </p>
+
+            <p>
+                Mari kita buat lebih banyak cerita,
+                lebih banyak perjalanan,
+                lebih banyak tawa,
+                dan lebih banyak kenangan.
+            </p>
+
+            <p style="font-size:22px;">
+                Aku sayang kamu.
+                <br>
+                Hari ini, besok,
+                dan seterusnya. ❤️
+            </p>
+
+            <div class="signature">
+                — Dari suamimu, dengan cinta ❤️
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
